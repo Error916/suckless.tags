@@ -41,7 +41,7 @@ while true; do
         clear
     elif [[ "$action" = "v" ]]; then
         while true; do
-            echo -ne "\n\n Change VOL?  j(dec) k(inc) q(quit):\n\n    "
+            echo -ne "\n\n Change VOL?  j(dec) k(inc) q(quit)\nm(mute) u(unmute):\n    "
             amixer get Master | tail -n 1
             read -r -n 1 change
             if [[ "$change" = "k" ]]; then
@@ -55,6 +55,12 @@ while true; do
                 #Comment the above line and uncomment the line below
                 #to use pulseaudio instead of amixer
                 #pactl -- set-sink-volume 0 -3%
+                clear
+            elif [[ "$change" = "m" ]]; then
+                amixer set Master toggle
+                clear
+            elif [[ "$change" = "u" ]]; then
+                alsactl restore
                 clear
             elif [[ "$change" != "q" ]]; then
                 clear
