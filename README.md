@@ -5,8 +5,12 @@ https://user-images.githubusercontent.com/85027668/139530565-f1d6e37d-d922-455f-
 
 I've placed the scripts under /usr/local/bin
 
+```
 const char *tagcmd[]     = {"st", "-f", "Fira Code:size=13", "-n", "tag", "-g", "36x6",  "-e", "workspace", NULL };
+```
+```
 const char *gotocmd[]     = {"st", "-f", "Fira Code:size=13", "-n", "goto", "-g", "36x6",  "-e", "goto", NULL };
+```
 
 I created two scratchpads that call the script.
 
