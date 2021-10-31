@@ -3,8 +3,8 @@ while true; do
     workspace=0
     echo -ne "GOTO? a1 s2 d3 f4 g5 h6 j7 k8 l9: \n\n    "
     read -r -n 1 tag
-    sleep .3
     case $tag in
+        o | 0) workspace=0 ;;
         a | 1) workspace=1 ;;
         s | 2) workspace=2 ;;
         d | 3) workspace=3 ;;

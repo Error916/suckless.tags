@@ -3,7 +3,6 @@ while true; do
     workspace=0
     echo -ne "MOVE TO? a1 s2 d3 f4 g5 h6 j7 k8 l9: \n    "
     read -r -n 1 tag
-    sleep .3
     case $tag in
         a | 1) workspace=1 ;;
         s | 2) workspace=2 ;;
@@ -15,10 +14,8 @@ while true; do
         k | 8) workspace=8 ;;
         * | 9) workspace=9 ;;
     esac
-    echo "Moved to workspace $workspace"
     xdotool key Super+m
     xdotool key Super+Shift+$workspace
-    sleep .2
     xdotool key Super+$workspace
     clear
 done
