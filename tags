@@ -42,6 +42,7 @@ while true; do
     elif [[ "$action" = "v" ]]; then
         while true; do
             echo -ne "\n\n Change VOL?  j(dec) k(inc) q(quit):\n\n    "
+            amixer get Master | tail -n 1
             read -r -n 1 change
             if [[ "$change" = "k" ]]; then
                 amixer set Master 3+
@@ -56,6 +57,7 @@ while true; do
     elif [[ "$action" = "b" ]]; then
         while true; do
             echo -ne "\n\n Change Brightness?  j(dec) k(inc) q(quit):\n\n    "
+            brightnessctl g
             read -r -n 1 change
             if [[ "$change" = "k" ]]; then
                 brightnessctl set 3%+

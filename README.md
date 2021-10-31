@@ -1,6 +1,6 @@
 # suckless.tags
 
-### Script to go to a tag and move master window to a tag with ease.__
+### Script to go to a tag and move master window to a tag with ease.
 
 #### Suckless.tags can now be used to change volume and brightness :)
 
@@ -13,12 +13,11 @@ I've placed the script under /usr/local/bin
 ```
 const char *tagcmd[]      = {"st", "-f", "Fira Code:size=13", "-n", "tag", "-g", "36x6",  "-e", "tags", NULL };
 ```
-
 I created a scratchpad that calls the script.
 
 ### Prerequisites
 
-- setup scrathcpad for the popup
+- setup scratchpad for the popup
 
 - amixer for changing volume
 
