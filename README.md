@@ -1,22 +1,29 @@
 # suckless.tags
-Script to go to a tag and move master window to a tag with ease.
 
-https://user-images.githubusercontent.com/85027668/139530565-f1d6e37d-d922-455f-aa74-736cb4e04103.mp4
+__Script to go to a tag and move master window to a tag with ease.__
 
-I've placed the scripts under /usr/local/bin
+*There has been an update.
+
+I've placed the script under /usr/local/bin
 
 ```
-const char *tagcmd[]     = {"st", "-f", "Fira Code:size=13", "-n", "tag", "-g", "36x6",  "-e", "workspace", NULL };
-```
-```
-const char *gotocmd[]     = {"st", "-f", "Fira Code:size=13", "-n", "goto", "-g", "36x6",  "-e", "goto", NULL };
+const char *tagcmd[]      = {"st", "-f", "Fira Code:size=13", "-n", "tag", "-g", "36x6",  "-e", "tags", NULL };
 ```
 
-I created two scratchpads that call the script.
+I created a scratchpad that calls the script.
 
-By default the workspace script moves the master window to the tag you want. And then takes you to that workspace.
+It'd be better to map the command to toggle the scratchpad to a dedicated key instead of combination to reduce number of keypresses.
 
-The script uses xdotool so please change the key names in the script accordingly.
+### The script first asks you for the action.
 
-You can use alphabets as well as numbers.
+- Press g to go to a workspace and m to move the master window to a workspace.
 
+- If you chose g then now choose an alphabet or a number to go to that workspace.
+
+- If you chose g then now choose an alphabet or a number to move master to that workspace.
+
+__NOTE:__
+
+_The script uses xdotool so please change the key names in the script accordingly._
+
+_You can use alphabets as well as numbers._

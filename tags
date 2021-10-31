@@ -1,0 +1,46 @@
+#!/bin/bash
+while true; do
+    action=x
+    clear
+    echo -ne "\n\n    ACTION? g(Go to) m(Move to):\n\n    "
+    read -r -n 1 action
+    clear
+    if [[ "$action" = "g" ]]; then
+        echo -ne "\n\n    GO TO?  a1 s2 d3 f4 g5 fh j7 k8 l9:\n\n    "
+        read -r -n 1 tag
+        case $tag in
+            a | 1) workspace=1 ;;
+            s | 2) workspace=2 ;;
+            q | 3) workspace=3 ;;
+            w | 4) workspace=4 ;;
+            d | 5) workspace=5 ;;
+            f | 6) workspace=6 ;;
+            e | 7) workspace=7 ;;
+            r | 8) workspace=8 ;;
+            * | 9) workspace=9 ;;
+        esac
+        xdotool key Super+$workspace
+        clear
+    elif [[ "$action" = "m" ]]; then
+        echo -ne "\n\n    MOVE TO?  a1 s2 d3 f4 g5 fh j7 k8 l9:\n\n    "
+        read -r -n 1 tag
+        case $tag in
+            a | 1) workspace=1 ;;
+            s | 2) workspace=2 ;;
+            q | 3) workspace=3 ;;
+            w | 4) workspace=4 ;;
+            d | 5) workspace=5 ;;
+            f | 6) workspace=6 ;;
+            e | 7) workspace=7 ;;
+            r | 8) workspace=8 ;;
+            * | 9) workspace=9 ;;
+        esac
+        xdotool key Super+m
+        xdotool key Super+Shift+$workspace
+        xdotool key Super+$workspace
+        clear
+    else
+        echo -ne "\n\n    BAD CHOICE"
+        sleep 1
+    fi
+done
