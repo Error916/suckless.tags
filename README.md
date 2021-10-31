@@ -4,11 +4,7 @@ __Script to go to a tag and move master window to a tag with ease.__
 
 *There has been an update. Pay attention to the focused tags in the status bar in this video.*
 
-
-
 https://user-images.githubusercontent.com/85027668/139576478-a15c067c-e493-4713-baf5-3d9c366ce1ff.mp4
-
-
 
 I've placed the script under /usr/local/bin
 
@@ -20,7 +16,7 @@ I created a scratchpad that calls the script.
 
 It'd be better to map the command to toggle the scratchpad to a dedicated key instead of combination to reduce number of keypresses.
 
-### The script first asks you for the action.
+### The script prompts you for the action.
 
 - Press g to go to a workspace and m to move the master window to a workspace.
 
