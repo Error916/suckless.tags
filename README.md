@@ -1,14 +1,12 @@
 # suckless.tags
 
-__Script to go to a tag and move master window to a tag with ease.__
+###Script to go to a tag and move master window to a tag with ease.__
+
+####Suckless.tags can now be used to change volume and brightness :)
 
 *There has been an update. Pay attention to the focused tags in the status bar in this video.*
 
-
 https://user-images.githubusercontent.com/85027668/139577611-26936d4e-2119-45e1-b5f5-585639aac186.mp4
-
-
-
 
 I've placed the script under /usr/local/bin
 
@@ -18,6 +16,16 @@ const char *tagcmd[]      = {"st", "-f", "Fira Code:size=13", "-n", "tag", "-g",
 
 I created a scratchpad that calls the script.
 
+### Prerequisites
+
+- setup scrathcpad for the popup
+
+- amixer for changing volume
+
+- brightnessctl for changing brightness
+
+- dwm ;)
+
 It'd be better to map the command to toggle the scratchpad to a dedicated key instead of combination to reduce number of keypresses.
 
 ### The script prompts you for the action.
@@ -26,7 +34,13 @@ It'd be better to map the command to toggle the scratchpad to a dedicated key in
 
 - If you chose g then now choose an alphabet or a number to go to that workspace.
 
-- If you chose g then now choose an alphabet or a number to move master to that workspace.
+- If you chose m then now choose an alphabet or a number to move master to that workspace.
+
+- If you chose v then press j to reduce volume, k to increase or any other key to quit.
+
+- If you chose b then press j to reduce brightness, k to brightness or any other key to quit.
+
+- To quit out of the entire program when you're in the first menu, press q.
 
 __NOTE:__
 
