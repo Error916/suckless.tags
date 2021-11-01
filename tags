@@ -2,7 +2,7 @@
 while true; do
     action=x
     clear
-    echo -ne "\n\n ACTION? g(Go to) m(Move to) v(Vol) b(bright):\n\n    "
+    echo -ne "\n\n ACTION? g(Go to) m(Move to) v(Vol) b(bright)\n k(kbd):\n    "
     read -r -n 1 action
     clear
     if [[ "$action" = "g" ]]; then
@@ -50,6 +50,9 @@ while true; do
             elif [[ "$change" = "j" ]]; then
                 amixer set Master 3-
                 clear
+            elif [[ "$change" != "q" ]]; then
+                clear
+                continue
             else
                 break
             fi
@@ -66,11 +69,33 @@ while true; do
             elif [[ "$change" = "j" ]]; then
                 brightnessctl set 3%-
                 clear
+            elif [[ "$change" != "q" ]]; then
+                clear
+                continue
             else
                 break
             fi
         done
                 break
+    elif [[ "$action" = "k" ]]; then
+        while true; do
+            echo -ne "\n\n Keyboard Backlight?  j(dec) k(inc) q(quit):\n\n    "
+            brightnessctl g --device="$(ls /sys/class/leds | rg kbd)"
+            read -r -n 1 change
+            if [[ "$change" = "k" ]]; then
+                brightnessctl --device="$(ls /sys/class/leds | rg kbd)" set 1+
+                clear
+            elif [[ "$change" = "j" ]]; then
+                brightnessctl --device="$(ls /sys/class/leds | rg kbd)" set 1-
+                clear
+            elif [[ "$change" != "q" ]]; then
+                clear
+                continue
+            else
+                break
+            fi
+        done
+        break
     elif [[ "$action" = "q" ]]; then
         break
     else
