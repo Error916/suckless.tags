@@ -54,6 +54,7 @@ while true; do
                 break
             fi
         done
+                break
     elif [[ "$action" = "b" ]]; then
         while true; do
             echo -ne "\n\n Change Brightness?  j(dec) k(inc) q(quit):\n\n    "
@@ -69,6 +70,7 @@ while true; do
                 break
             fi
         done
+                break
     elif [[ "$action" = "q" ]]; then
         break
     else
