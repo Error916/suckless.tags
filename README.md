@@ -23,6 +23,10 @@ I created a scratchpad that calls the script.
 
 - brightnessctl for changing brightness
 
+- Place the touchpad_toggle script under /usr/loca/bin
+
+- Make sure both the scripts are executable(chmod +rwx /path/to/script)
+
 - dwm ;)
 
 It'd be better to map the command to toggle the scratchpad to a dedicated key instead of combination to reduce number of keypresses.

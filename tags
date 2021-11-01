@@ -2,7 +2,7 @@
 while true; do
     action=x
     clear
-    echo -ne "\n\n ACTION? g(Go to) m(Move to) v(Vol) b(bright)\n k(kbd):\n    "
+    echo -ne "\n\n ACTION? g(Go to) m(Move to) v(Vol) b(bright)\n k(kbd) t(touchpad):\n    "
     read -r -n 1 action
     clear
     if [[ "$action" = "g" ]]; then
@@ -57,7 +57,7 @@ while true; do
                 break
             fi
         done
-                break
+        break
     elif [[ "$action" = "b" ]]; then
         while true; do
             echo -ne "\n\n Change Brightness?  j(dec) k(inc) q(quit):\n\n    "
@@ -76,7 +76,7 @@ while true; do
                 break
             fi
         done
-                break
+        break
     elif [[ "$action" = "k" ]]; then
         while true; do
             echo -ne "\n\n Keyboard Backlight?  j(dec) k(inc) q(quit):\n\n    "
@@ -95,6 +95,9 @@ while true; do
                 break
             fi
         done
+        break
+    elif [[ "$action" = "t" ]]; then
+        toggle_touchpad
         break
     elif [[ "$action" = "q" ]]; then
         break
