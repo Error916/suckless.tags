@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 while true; do
     action=x
     clear
@@ -17,7 +17,7 @@ while true; do
             h | 6) workspace=6 ;;
             j | 7) workspace=7 ;;
             k | 8) workspace=8 ;;
-            * | 9) workspace=9 ;;
+            *    ) workspace=9 ;;
         esac
         xdotool key Super+$workspace
         clear
@@ -33,7 +33,7 @@ while true; do
             h | 6) workspace=6 ;;
             j | 7) workspace=7 ;;
             k | 8) workspace=8 ;;
-            * | 9) workspace=9 ;;
+            *    ) workspace=9 ;;
         esac
         xdotool key Super+m
         xdotool key Super+Shift+$workspace
@@ -80,13 +80,13 @@ while true; do
     elif [[ "$action" = "k" ]]; then
         while true; do
             echo -ne "\n\n Keyboard Backlight?  j(dec) k(inc) q(quit):\n\n    "
-            brightnessctl g --device="$(ls /sys/class/leds | rg kbd)"
+            brightnessctl g --device="$(find /sys/class/leds -name *kdb*)"
             read -r -n 1 change
             if [[ "$change" = "k" ]]; then
-                brightnessctl --device="$(ls /sys/class/leds | rg kbd)" set 1+
+                brightnessctl --device="$(find /sys/class/leds -name *kdb*)" set 1+
                 clear
             elif [[ "$change" = "j" ]]; then
-                brightnessctl --device="$(ls /sys/class/leds | rg kbd)" set 1-
+                brightnessctl --device="$(find /sys/class/leds -name *kdb*)" set 1-
                 clear
             elif [[ "$change" != "q" ]]; then
                 clear
