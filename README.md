@@ -2,7 +2,7 @@
 
 ### Script to go to a tag and move master window to a tag with ease.
 
-#### Suckless.tags can now be used to change volume, brightness, keyboard backlight and toggle touchpad : )
+#### Suckless.tags can now be used to change volume, brightness, keyboard backlight and toggle touchpad
 
 *There has been an update. Pay attention to the focused tags in the status bar in this video.*
 
