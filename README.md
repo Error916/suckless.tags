@@ -45,8 +45,11 @@ I created a scratchpad that calls the script.
 
     - To quit out of the entire program when you're in the first menu, press q.
 
+
     __NOTE:__
 
-    _The script uses xdotool so please change the key names in the script accordingly._
+    - _The script uses xdotool so please change the key names in the script accordingly._
 
-    _You can use alphabets as well as numbers._
+    - _You can use alphabets as well as numbers._
+
+    - _To use pulseaudio instead of alsa, just follow the commented instructions in the script.
