@@ -2,7 +2,7 @@
 
 ### Script to go to a tag and move master window to a tag with ease.
 
-#### Suckless.tags can now be used to change volume, brightness, keyboard backlight and toggle touchpad : )
+#### Suckless.tags can now be used to change volume, brightness, keyboard backlight and toggle touchpad
 
 *There has been an update. Pay attention to the focused tags in the status bar in this video.*
 
@@ -45,8 +45,11 @@ I created a scratchpad that calls the script.
 
     - To quit out of the entire program when you're in the first menu, press q.
 
+
     __NOTE:__
 
-    _The script uses xdotool so please change the key names in the script accordingly._
+    - _The script uses xdotool so please change the key names in the script accordingly._
 
-    _You can use alphabets as well as numbers._
+    - _You can use alphabets as well as numbers._
+
+    - _To use pulseaudio instead of alsa, just follow the commented instructions in the script.
